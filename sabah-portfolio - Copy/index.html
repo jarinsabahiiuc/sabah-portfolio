@@ -2,126 +2,92 @@
 <html lang="en">
 <head>
    <meta charset="UTF-8">
-   <meta name="description" content="Sabah — Computer Science & Engineering student at IIUC, aspiring software developer and UI/UX designer. Explore my projects, skills and creative journey.">
-   <meta name="robots" content="index, follow">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-   <!--=============== FAVICON ===============-->
-   <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png">
-
-   <!--=============== REMIXICONS ===============-->
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css">
-
-   <!--=============== DEVICON (technology icons) ===============-->
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
-
-   <!--=============== SWIPER CSS ===============-->
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
-
-   <!--=============== CSS ===============-->
-   <link rel="stylesheet" href="assets/css/styles.css">
-
+   <meta name="description" content="Sabah - Computer Science & Engineering student at IIUC, aspiring software developer and UI/UX designer.">
    <title>Sabah | CSE Student, Developer & Designer</title>
+ 
+   <!-- Favicon -->
+   <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png">
+ 
+   <!-- Google Fonts -->
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Syne:wght@400..800&display=swap">
+ 
+   <!-- Icons -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
+ 
+   <!-- My CSS -->
+   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-   <!--==================== HEADER & NAV ====================-->
-   <header class="header" id="header">
-      <nav class="nav container">
-         <a href="#home" class="nav__logo" aria-label="Sabah — home">
-            <img src="assets/img/logo.png" alt="Sabah monogram logo">
+ 
+   <!-- ================= HEADER ================= -->
+   <div class="header" id="header">
+      <div class="nav container">
+ 
+         <a href="#home" class="logo">
+            <img src="assets/img/logo.png" alt="Sabah logo">
          </a>
-
-         <div class="nav__menu" id="nav-menu">
-            <ul class="nav__list">
-               <li><a href="#home" class="nav__link active-link">Home</a></li>
-               <li><a href="#work" class="nav__link">Works</a></li>
-               <li><a href="#service" class="nav__link">My Services</a></li>
-               <li><a href="#skills" class="nav__link">Skills</a></li>
-               <li><a href="#contact" class="nav__contact">Contact me</a></li>
-            </ul>
-
-            <!-- Close -->
-            <button class="nav__close" id="nav-close" aria-label="Close menu">
-               <i class="ri-close-large-line"></i>
-            </button>
+ 
+         <!-- Menu links -->
+         <div class="menu" id="menu">
+            <a href="#home" class="link active">Home</a>
+            <a href="#work" class="link">Works</a>
+            <a href="#service" class="link">My Services</a>
+            <a href="#skills" class="link">Skills</a>
+            <a href="#contact" class="link contact-link">Contact me</a>
+ 
+            <button class="close-btn" id="close-btn"><i class="ri-close-line"></i></button>
          </div>
-
-         <!-- Toggle -->
-         <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu">
-            <i class="ri-menu-line"></i>
-         </button>
-      </nav>
-   </header>
-
-   <!--==================== MAIN ====================-->
-   <main class="main">
-      <!-- CUSTOM CURSOR -->
-      <div class="cursor" aria-hidden="true"></div>
-
-      <!--==================== HOME SECTION ====================-->
-      <section class="home section" id="home">
-         <div class="blob-big" style="top: 6rem; left: -4rem;"></div>
-         <div class="blob-small" style="bottom: 4rem; right: 2rem;"></div>
-
-         <div class="home__container container grid">
-            <div class="home__data">
-               <h3 class="home__subtitle">Hello, I'm</h3>
-               <h1 class="home__title">Sabah</h1>
-               <h2 class="home__profession">
-                  I'm a <span id="typed-role"></span>
-               </h2>
-               <p class="home__description">
+ 
+         <button class="toggle-btn" id="toggle-btn"><i class="ri-menu-line"></i></button>
+      </div>
+   </div>
+ 
+   <div class="main">
+ 
+      <!-- ================= HOME ================= -->
+      <section class="section home" id="home">
+         <div class="container home-box">
+ 
+            <div class="home-text">
+               <h3 class="home-hello">Hello, I'm</h3>
+               <h1 class="home-name">Sabah</h1>
+               <h2 class="home-role" id="role"></h2>
+               <p class="home-about">
                   Computer Science &amp; Engineering student at IIUC, passionate about
                   technology, creative design and building digital experiences that
                   make everyday life easier.
                </p>
-
-               <div class="home__buttons">
-                  <a href="#work" class="button">
-                     <i class="ri-briefcase-4-line"></i> View my work
-                  </a>
-                  <a href="#contact" class="button button--outline">
-                     <i class="ri-mail-send-line"></i> Let's talk
-                  </a>
+ 
+               <div class="home-buttons">
+                  <a href="#work" class="button"><i class="ri-briefcase-4-line"></i> View my work</a>
+                  <a href="#contact" class="button button-outline"><i class="ri-mail-send-line"></i> Let's talk</a>
                </div>
-
-               <div class="home__social">
-                  <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub"><i class="ri-github-fill"></i></a>
-                  <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ri-linkedin-box-fill"></i></a>
-                  <a href="https://www.behance.net/" target="_blank" rel="noopener" aria-label="Behance"><i class="ri-behance-fill"></i></a>
-                  <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+ 
+               <div class="social">
+                  <a href="https://github.com/" target="_blank"><i class="ri-github-fill"></i></a>
+                  <a href="https://www.linkedin.com/" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+                  <a href="https://www.behance.net/" target="_blank"><i class="ri-behance-fill"></i></a>
+                  <a href="https://www.instagram.com/" target="_blank"><i class="ri-instagram-line"></i></a>
                </div>
             </div>
-
-            <div class="home__image">
-               <div class="home__shape"></div>
-               <img src="assets/img/home-img.png" alt="Portrait of Sabah" class="home__img">
-
-               <!-- Circular rotating text -->
-               <div class="home__circle" aria-hidden="true">
-                  <svg viewBox="0 0 200 200" class="home__circle-svg">
-                     <defs>
-                        <path id="circlePath" d="M 100,100 m -80,0 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0"/>
-                     </defs>
-                     <text>
-                        <textPath href="#circlePath" startOffset="0">
-                           ALWAYS LEARNING • ALWAYS CREATING • ALWAYS GROWING •
-                        </textPath>
-                     </text>
-                  </svg>
-                  <i class="ri-arrow-down-line"></i>
-               </div>
+ 
+            <div class="home-image">
+               <div class="home-shape"></div>
+               <img src="assets/img/home-img.png" alt="Portrait of Sabah">
             </div>
+ 
          </div>
       </section>
-
-      <!--==================== ABOUT SECTION ====================-->
-      <section class="about section" id="about">
-         <div class="about__container container grid">
-            <h2 class="section__title">About <span>me</span></h2>
-
-            <div class="about__content">
-               <div class="about__text">
+ 
+      <!-- ================= ABOUT ================= -->
+      <section class="section" id="about">
+         <div class="container">
+            <h2 class="section-title">About me</h2>
+ 
+            <div class="about-box">
+               <div class="about-text">
                   <p>
                      I'm currently pursuing my BSc in Computer Science and Engineering at the
                      <b>International Islamic University Chittagong (IIUC)</b>. My academic
@@ -133,213 +99,208 @@
                      technologies and working on personal projects that challenge my creativity
                      and technical abilities.
                   </p>
-                  <p>
-                     I'm continuously learning, building and growing — one project at a time.
-                  </p>
+                  <p>I'm continuously learning, building and growing - one project at a time.</p>
                </div>
-
-               <div class="about__stats">
-                  <div class="about__stat">
+ 
+               <div class="about-stats">
+                  <div class="stat">
                      <h3>BSc</h3>
-                     <span>CSE at IIUC</span>
+                     <p>CSE at IIUC</p>
                   </div>
-                  <div class="about__stat">
+                  <div class="stat">
                      <h3>05+</h3>
-                     <span>Featured projects</span>
+                     <p>Featured projects</p>
                   </div>
-                  <div class="about__stat">
+                  <div class="stat">
                      <h3>04</h3>
-                     <span>Core interests</span>
+                     <p>Core interests</p>
                   </div>
                </div>
             </div>
-
-            <ul class="about__interests">
-               <li><i class="ri-code-s-slash-line"></i> Web Development</li>
-               <li><i class="ri-pen-nib-line"></i> UI/UX Design</li>
-               <li><i class="ri-palette-line"></i> Graphic Design</li>
-               <li><i class="ri-smartphone-line"></i> Mobile Apps</li>
-            </ul>
-         </div>
-      </section>
-
-      <!--==================== WORK SECTION ====================-->
-      <section class="work section" id="work">
-         <div class="container">
-            <h2 class="section__title">Featured <span>projects</span></h2>
-
-            <div class="swiper work__swiper">
-               <div class="swiper-wrapper">
-                  <!-- 01 -->
-                  <article class="work__card swiper-slide">
-                     <div class="work__image"><img src="assets/img/work-img-1.png" alt="Personal portfolio website preview"></div>
-                     <div class="work__data">
-                        <span class="work__number">01</span>
-                        <h3 class="work__title">Personal Portfolio Website</h3>
-                        <p class="work__description">A responsive portfolio website designed to showcase my skills, projects and creative journey. Clean layout, smooth navigation and a modern visual style.</p>
-                        <p class="work__tech"><b>Technologies:</b> HTML, CSS, JavaScript</p>
-                     </div>
-                  </article>
-
-                  <!-- 02 -->
-                  <article class="work__card swiper-slide">
-                     <div class="work__image"><img src="assets/img/work-img-2.png" alt="TaskFlow dashboard preview"></div>
-                     <div class="work__data">
-                        <span class="work__number">02</span>
-                        <h3 class="work__title">TaskFlow — Productivity Dashboard</h3>
-                        <p class="work__description">A conceptual dashboard to organize tasks, track progress and manage daily activities, focused on simplicity, usability and a distraction-free experience.</p>
-                        <p class="work__tech"><b>Technologies:</b> UI/UX Design, Figma, HTML, CSS</p>
-                     </div>
-                  </article>
-
-                  <!-- 03 -->
-                  <article class="work__card swiper-slide">
-                     <div class="work__image"><img src="assets/img/work-img-3.png" alt="Quiz management system preview"></div>
-                     <div class="work__data">
-                        <span class="work__number">03</span>
-                        <h3 class="work__title">Quiz Management System</h3>
-                        <p class="work__description">A student-oriented quiz application concept that organizes quizzes, questions and answer choices, exploring database design and backend API development.</p>
-                        <p class="work__tech"><b>Technologies:</b> Python, FastAPI, PostgreSQL</p>
-                     </div>
-                  </article>
-
-                  <!-- 04 -->
-                  <article class="work__card swiper-slide">
-                     <div class="work__image"><img src="assets/img/work-img-4.png" alt="Social Connect mobile app preview"></div>
-                     <div class="work__data">
-                        <span class="work__number">04</span>
-                        <h3 class="work__title">Social Connect — Mobile App Concept</h3>
-                        <p class="work__description">A modern social networking concept with profiles, posts, photo sharing and messaging, emphasizing intuitive navigation and a friendly mobile experience.</p>
-                        <p class="work__tech"><b>Technologies:</b> React Native, UI/UX Design</p>
-                     </div>
-                  </article>
-
-                  <!-- 05 -->
-                  <article class="work__card swiper-slide">
-                     <div class="work__image"><img src="assets/img/work-img-5.png" alt="Creative design collection preview"></div>
-                     <div class="work__data">
-                        <span class="work__number">05</span>
-                        <h3 class="work__title">Creative Design Collection</h3>
-                        <p class="work__description">Digital design concepts including social media graphics, promotional materials and visual compositions exploring typography, layout and visual storytelling.</p>
-                        <p class="work__tech"><b>Tools:</b> Canva, Figma</p>
-                     </div>
-                  </article>
-               </div>
-
-               <div class="swiper-pagination"></div>
+ 
+            <div class="interests">
+               <p><i class="ri-code-s-slash-line"></i> Web Development</p>
+               <p><i class="ri-pen-nib-line"></i> UI/UX Design</p>
+               <p><i class="ri-palette-line"></i> Graphic Design</p>
+               <p><i class="ri-smartphone-line"></i> Mobile Apps</p>
             </div>
          </div>
       </section>
-
-      <!--==================== SERVICES SECTION ====================-->
-      <section class="services section" id="service">
+ 
+      <!-- ================= WORKS ================= -->
+      <section class="section" id="work">
          <div class="container">
-            <h2 class="section__title">My <span>services</span></h2>
-
-            <div class="services__container grid">
-               <article class="services__card">
-                  <header class="services__header">
-                     <i class="ri-code-box-line services__icon"></i>
-                     <h3 class="services__title">Web Development</h3>
-                     <button class="services__button" aria-label="Toggle details"><i class="ri-arrow-down-s-line"></i></button>
-                  </header>
-                  <div class="services__info">
-                     <p>Responsive, clean and accessible websites built with HTML, CSS and JavaScript — from personal portfolios to small project sites.</p>
+            <h2 class="section-title">Featured projects</h2>
+ 
+            <div class="work-list">
+ 
+               <div class="card">
+                  <img src="assets/img/work-img-1.png" alt="Personal portfolio website preview">
+                  <div class="card-body">
+                     <p class="number">01</p>
+                     <h3>Personal Portfolio Website</h3>
+                     <p>A responsive portfolio website designed to showcase my skills, projects and creative journey. Clean layout, smooth navigation and a modern visual style.</p>
+                     <p class="tech"><b>Technologies:</b> HTML, CSS, JavaScript</p>
                   </div>
-               </article>
-
-               <article class="services__card">
-                  <header class="services__header">
-                     <i class="ri-layout-masonry-line services__icon"></i>
-                     <h3 class="services__title">UI/UX Design</h3>
-                     <button class="services__button" aria-label="Toggle details"><i class="ri-arrow-down-s-line"></i></button>
-                  </header>
-                  <div class="services__info">
+               </div>
+ 
+               <div class="card">
+                  <img src="assets/img/work-img-2.png" alt="TaskFlow dashboard preview">
+                  <div class="card-body">
+                     <p class="number">02</p>
+                     <h3>TaskFlow - Productivity Dashboard</h3>
+                     <p>A conceptual dashboard to organize tasks, track progress and manage daily activities, focused on simplicity, usability and a distraction-free experience.</p>
+                     <p class="tech"><b>Technologies:</b> UI/UX Design, Figma, HTML, CSS</p>
+                  </div>
+               </div>
+ 
+               <div class="card">
+                  <img src="assets/img/work-img-3.png" alt="Quiz management system preview">
+                  <div class="card-body">
+                     <p class="number">03</p>
+                     <h3>Quiz Management System</h3>
+                     <p>A student-oriented quiz application concept that organizes quizzes, questions and answer choices, exploring database design and backend API development.</p>
+                     <p class="tech"><b>Technologies:</b> Python, FastAPI, PostgreSQL</p>
+                  </div>
+               </div>
+ 
+               <div class="card">
+                  <img src="assets/img/work-img-4.png" alt="Social Connect mobile app preview">
+                  <div class="card-body">
+                     <p class="number">04</p>
+                     <h3>Social Connect - Mobile App Concept</h3>
+                     <p>A modern social networking concept with profiles, posts, photo sharing and messaging, emphasizing intuitive navigation and a friendly mobile experience.</p>
+                     <p class="tech"><b>Technologies:</b> React Native, UI/UX Design</p>
+                  </div>
+               </div>
+ 
+               <div class="card">
+                  <img src="assets/img/work-img-5.png" alt="Creative design collection preview">
+                  <div class="card-body">
+                     <p class="number">05</p>
+                     <h3>Creative Design Collection</h3>
+                     <p>Digital design concepts including social media graphics, promotional materials and visual compositions exploring typography, layout and visual storytelling.</p>
+                     <p class="tech"><b>Tools:</b> Canva, Figma</p>
+                  </div>
+               </div>
+ 
+            </div>
+         </div>
+      </section>
+ 
+      <!-- ================= SERVICES ================= -->
+      <section class="section" id="service">
+         <div class="container">
+            <h2 class="section-title">My services</h2>
+ 
+            <div class="service-list">
+ 
+               <div class="service">
+                  <div class="service-top">
+                     <i class="ri-code-box-line service-icon"></i>
+                     <h3>Web Development</h3>
+                     <i class="ri-arrow-down-s-line arrow"></i>
+                  </div>
+                  <div class="service-info">
+                     <p>Responsive, clean and accessible websites built with HTML, CSS and JavaScript - from personal portfolios to small project sites.</p>
+                  </div>
+               </div>
+ 
+               <div class="service">
+                  <div class="service-top">
+                     <i class="ri-layout-masonry-line service-icon"></i>
+                     <h3>UI/UX Design</h3>
+                     <i class="ri-arrow-down-s-line arrow"></i>
+                  </div>
+                  <div class="service-info">
                      <p>User-first interface design in Figma: wireframes, prototypes and polished screens with thoughtful flows and intuitive navigation.</p>
                   </div>
-               </article>
-
-               <article class="services__card">
-                  <header class="services__header">
-                     <i class="ri-palette-line services__icon"></i>
-                     <h3 class="services__title">Graphic Design</h3>
-                     <button class="services__button" aria-label="Toggle details"><i class="ri-arrow-down-s-line"></i></button>
-                  </header>
-                  <div class="services__info">
+               </div>
+ 
+               <div class="service">
+                  <div class="service-top">
+                     <i class="ri-palette-line service-icon"></i>
+                     <h3>Graphic Design</h3>
+                     <i class="ri-arrow-down-s-line arrow"></i>
+                  </div>
+                  <div class="service-info">
                      <p>Social media graphics, promotional materials and visual compositions made in Canva and Figma, with attention to typography and layout.</p>
                   </div>
-               </article>
-
-               <article class="services__card">
-                  <header class="services__header">
-                     <i class="ri-smartphone-line services__icon"></i>
-                     <h3 class="services__title">App &amp; Backend Concepts</h3>
-                     <button class="services__button" aria-label="Toggle details"><i class="ri-arrow-down-s-line"></i></button>
-                  </header>
-                  <div class="services__info">
+               </div>
+ 
+               <div class="service">
+                  <div class="service-top">
+                     <i class="ri-smartphone-line service-icon"></i>
+                     <h3>App &amp; Backend Concepts</h3>
+                     <i class="ri-arrow-down-s-line arrow"></i>
+                  </div>
+                  <div class="service-info">
                      <p>Mobile app concepts and backend API ideas using React Native, Python, FastAPI and PostgreSQL, with structured database design.</p>
                   </div>
-               </article>
+               </div>
+ 
             </div>
          </div>
       </section>
-
-      <!--==================== SKILLS SECTION ====================-->
-      <section class="skills section" id="skills">
+ 
+      <!-- ================= SKILLS ================= -->
+      <section class="section" id="skills">
          <div class="container">
-            <h2 class="section__title">My <span>skills</span></h2>
-
-            <div class="skills__container grid">
-               <div class="skills__group">
-                  <h3 class="skills__title">Frontend</h3>
-                  <div class="skills__list">
-                     <div class="skills__item"><i class="devicon-html5-plain"></i><span>HTML</span></div>
-                     <div class="skills__item"><i class="devicon-css3-plain"></i><span>CSS</span></div>
-                     <div class="skills__item"><i class="devicon-javascript-plain"></i><span>JavaScript</span></div>
-                     <div class="skills__item"><i class="devicon-react-original"></i><span>React Native</span></div>
-                     <div class="skills__item"><i class="devicon-git-plain"></i><span>Git</span></div>
-                     <div class="skills__item"><i class="devicon-github-original"></i><span>GitHub</span></div>
+            <h2 class="section-title">My skills</h2>
+ 
+            <div class="skills-list">
+ 
+               <div class="skill-group">
+                  <h3>Frontend</h3>
+                  <div class="skill-icons">
+                     <div class="skill"><i class="devicon-html5-plain"></i><p>HTML</p></div>
+                     <div class="skill"><i class="devicon-css3-plain"></i><p>CSS</p></div>
+                     <div class="skill"><i class="devicon-javascript-plain"></i><p>JavaScript</p></div>
+                     <div class="skill"><i class="devicon-react-original"></i><p>React Native</p></div>
+                     <div class="skill"><i class="devicon-git-plain"></i><p>Git</p></div>
+                     <div class="skill"><i class="devicon-github-original"></i><p>GitHub</p></div>
                   </div>
                </div>
-
-               <div class="skills__group">
-                  <h3 class="skills__title">Backend</h3>
-                  <div class="skills__list">
-                     <div class="skills__item"><i class="devicon-c-plain"></i><span>C</span></div>
-                     <div class="skills__item"><i class="devicon-cplusplus-plain"></i><span>C++</span></div>
-                     <div class="skills__item"><i class="devicon-python-plain"></i><span>Python</span></div>
-                     <div class="skills__item"><i class="devicon-fastapi-plain"></i><span>FastAPI</span></div>
-                     <div class="skills__item"><i class="devicon-postgresql-plain"></i><span>PostgreSQL</span></div>
+ 
+               <div class="skill-group">
+                  <h3>Backend</h3>
+                  <div class="skill-icons">
+                     <div class="skill"><i class="devicon-c-plain"></i><p>C</p></div>
+                     <div class="skill"><i class="devicon-cplusplus-plain"></i><p>C++</p></div>
+                     <div class="skill"><i class="devicon-python-plain"></i><p>Python</p></div>
+                     <div class="skill"><i class="devicon-fastapi-plain"></i><p>FastAPI</p></div>
+                     <div class="skill"><i class="devicon-postgresql-plain"></i><p>PostgreSQL</p></div>
                   </div>
                </div>
-
-               <div class="skills__group">
-                  <h3 class="skills__title">Design &amp; Creative</h3>
-                  <div class="skills__list">
-                     <div class="skills__item"><i class="devicon-figma-plain"></i><span>Figma</span></div>
-                     <div class="skills__item"><i class="ri-palette-line"></i><span>Canva</span></div>
-                     <div class="skills__item"><i class="ri-layout-masonry-line"></i><span>UI/UX</span></div>
-                     <div class="skills__item"><i class="ri-brush-line"></i><span>Graphic Design</span></div>
-                     <div class="skills__item"><i class="ri-image-edit-line"></i><span>Image Editing</span></div>
-                     <div class="skills__item"><i class="ri-movie-line"></i><span>Video Editing</span></div>
+ 
+               <div class="skill-group">
+                  <h3>Design &amp; Creative</h3>
+                  <div class="skill-icons">
+                     <div class="skill"><i class="devicon-figma-plain"></i><p>Figma</p></div>
+                     <div class="skill"><i class="ri-palette-line"></i><p>Canva</p></div>
+                     <div class="skill"><i class="ri-layout-masonry-line"></i><p>UI/UX</p></div>
+                     <div class="skill"><i class="ri-brush-line"></i><p>Graphic Design</p></div>
+                     <div class="skill"><i class="ri-image-edit-line"></i><p>Image Editing</p></div>
+                     <div class="skill"><i class="ri-movie-line"></i><p>Video Editing</p></div>
                   </div>
                </div>
+ 
             </div>
-
-            <p class="skills__other">
+ 
+            <p class="skills-other">
                <i class="ri-lightbulb-flash-line"></i>
                Also: problem-solving · teamwork · responsive web design
             </p>
          </div>
       </section>
-
-      <!--==================== APPROACH SECTION ====================-->
-      <section class="approach section">
+ 
+      <!-- ================= APPROACH ================= -->
+      <section class="section">
          <div class="container">
-            <h2 class="section__title">My <span>approach</span></h2>
-
-            <div class="approach__card">
-               <i class="ri-double-quotes-l approach__quote"></i>
+            <h2 class="section-title">My approach</h2>
+ 
+            <div class="approach-box">
+               <i class="ri-double-quotes-l quote-icon"></i>
                <p>
                   I believe in learning by doing. Every project is an opportunity to explore
                   new ideas, solve problems and develop a better understanding of technology
@@ -349,86 +310,72 @@
                   My goal is to keep improving as a developer and designer while creating
                   digital experiences that are useful, accessible and enjoyable to use.
                </p>
-               <span class="approach__sign">— Sabah</span>
+               <p class="sign">- Sabah</p>
             </div>
          </div>
       </section>
-
-      <!--==================== CONTACT SECTION ====================-->
-      <section class="contact section" id="contact">
+ 
+      <!-- ================= CONTACT ================= -->
+      <section class="section" id="contact">
          <div class="container">
-            <h2 class="section__title">Let's <span>connect</span></h2>
-
-            <div class="contact__container grid">
-               <div class="contact__data">
-                  <h3 class="contact__title">Always open to new ideas</h3>
-                  <p class="contact__description">
+            <h2 class="section-title">Let's connect</h2>
+ 
+            <div class="contact-box">
+ 
+               <div class="contact-text">
+                  <h3>Always open to new ideas</h3>
+                  <p>
                      I'm always open to connecting with fellow students, exploring creative
                      ideas and learning from people in the technology and design community.
                   </p>
-                  <div class="contact__info">
-                     <p><i class="ri-map-pin-line"></i> Chattogram, Bangladesh</p>
-                     <p><i class="ri-graduation-cap-line"></i> International Islamic University Chittagong</p>
-                  </div>
+                  <p><i class="ri-map-pin-line"></i> Chattogram, Bangladesh</p>
+                  <p><i class="ri-graduation-cap-line"></i> International Islamic University Chittagong</p>
                </div>
-
-               <form class="contact__form" id="contact-form">
-                  <div class="contact__group">
-                     <input type="text" name="user_name" id="user-name" class="contact__input" placeholder=" " required>
-                     <label for="user-name" class="contact__label">Name</label>
+ 
+               <form class="contact-form" id="contact-form">
+                  <div class="field">
+                     <label for="user-name">Name</label>
+                     <input type="text" id="user-name" name="user_name" placeholder="Your name" required>
                   </div>
-                  <div class="contact__group">
-                     <input type="email" name="user_email" id="user-email" class="contact__input" placeholder=" " required>
-                     <label for="user-email" class="contact__label">Email</label>
+                  <div class="field">
+                     <label for="user-email">Email</label>
+                     <input type="email" id="user-email" name="user_email" placeholder="Your email" required>
                   </div>
-                  <div class="contact__group">
-                     <textarea name="message" id="user-message" class="contact__input contact__area" placeholder=" " required></textarea>
-                     <label for="user-message" class="contact__label">Message</label>
+                  <div class="field">
+                     <label for="user-message">Message</label>
+                     <textarea id="user-message" name="message" placeholder="Your message" required></textarea>
                   </div>
-
-                  <button type="submit" class="button contact__button">
-                     <i class="ri-send-plane-line"></i> Send message
-                  </button>
-                  <p class="contact__message" id="contact-message" role="status"></p>
+ 
+                  <button type="submit" class="button"><i class="ri-send-plane-line"></i> Send message</button>
                </form>
+ 
             </div>
          </div>
       </section>
-   </main>
-
-   <!--==================== FOOTER ====================-->
-   <footer class="footer">
-      <div class="footer__container container">
-         <a href="#home" class="footer__logo"><img src="assets/img/logo.png" alt="Sabah logo"></a>
-         <p class="footer__tagline">Always learning. Always creating. Always growing.</p>
-         <div class="footer__social">
-            <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub"><i class="ri-github-fill"></i></a>
-            <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ri-linkedin-box-fill"></i></a>
-            <a href="https://www.behance.net/" target="_blank" rel="noopener" aria-label="Behance"><i class="ri-behance-fill"></i></a>
-            <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+ 
+   </div>
+ 
+   <!-- ================= FOOTER ================= -->
+   <div class="footer">
+      <div class="container footer-box">
+         <a href="#home"><img src="assets/img/logo.png" alt="Sabah logo" class="footer-logo"></a>
+         <p>Always learning. Always creating. Always growing.</p>
+ 
+         <div class="social">
+            <a href="https://github.com/" target="_blank"><i class="ri-github-fill"></i></a>
+            <a href="https://www.linkedin.com/" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+            <a href="https://www.behance.net/" target="_blank"><i class="ri-behance-fill"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="ri-instagram-line"></i></a>
          </div>
-         <span class="footer__copy">&#169; 2026 Sabah. All rights reserved.</span>
+ 
+         <p class="copy">&#169; 2026 Sabah. All rights reserved.</p>
       </div>
-   </footer>
-
-   <!--========== SCROLL UP ==========-->
-   <a href="#home" class="scrollup" id="scroll-up" aria-label="Scroll to top">
-      <i class="ri-arrow-up-line"></i>
-   </a>
-
-   <!--=============== SCROLLREVEAL ===============-->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
-
-   <!--=============== TYPED JS ===============-->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.min.js"></script>
-
-   <!--=============== SWIPER JS ===============-->
-   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-
-   <!--=============== EMAIL JS ===============-->
-   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-   <!--=============== MAIN JS ===============-->
+   </div>
+ 
+   <!-- Scroll up button -->
+   <a href="#home" class="scroll-up" id="scroll-up"><i class="ri-arrow-up-line"></i></a>
+ 
+   <!-- My JS -->
    <script src="assets/js/main.js"></script>
 </body>
 </html>
